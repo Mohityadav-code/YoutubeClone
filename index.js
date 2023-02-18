@@ -70,7 +70,7 @@ hoverBgWhiteTextBlackBold.forEach((element) => {
   
   function fetchVideosByQuery() {
     const query="puppy"
-    const apiKey = "AIzaSyAmr8jGv_9tXPEWXwKQfzbRDRPNIVpuD1A";
+    const apiKey = "#############################";  //we can't write api keys publicly 
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${query}&key=${apiKey}`;
   
     fetch(url)
@@ -111,113 +111,4 @@ hoverBgWhiteTextBlackBold.forEach((element) => {
     }
   }
   
-// const apiKey="AIzaSyBWs_RprsJw7_eQl84PQL2eZ4zIMgl069U"
-// const query = 'puppies';
-// var arr=[]
-// class dataOfVideo{
-//     constructor(name,classc){
 
-//         this.videoId=name;
-//         this.thumbnail=classc;
-//     }
-
-// }
-
-// const maxResults = 10;
-// const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=${maxResults}&q=${query}&key=${apiKey}`;
-// for (let i = 0; i <20; i++) {
-
-// fetch(url)
-//   .then(response => response.json())
-//   .then(data => {
-//       var obj=new dataOfVideo
-//       const videos = data.items.map(item =>( {
-
-//       videoId :item.id.videoId,
-//       title:item.snippet.title,
-//      thumbnail: item.snippet.thumbnails.medium.url
-//     }));
-//     videos.forEach(video => {
-//       // You can access the video ID, title, and thumbnail for each video
-//       console.log(video.videoId);
-//       console.log(video.title);
-//       console.log(video.thumbnail);
-
-//       // To get view count and upload date for each video, you will need to make a separate API request to the videos endpoint using the video ID
-//       const videoUrl = `https://www.googleapis.com/youtube/v3/videos?id=${video.videoId}&key=${apiKey}&part=statistics,snippet`;
-//       fetch(videoUrl)
-//         .then(response => response.json())
-//         .then(data => {
-//           obj.videoData = data.items[0];
-//           obj.viewCount = videoData.statistics.viewCount;
-//           obj.uploadDate = new Date(videoData.snippet.publishedAt);
-
-//           arr.push(obj)
-//           // You can now access the view count and upload date for the current video
-//           console.log(viewCount);
-//           console.log(uploadDate);
-//           console.log("arr",arr);
-//         });
-//     });
-//   });
-
-// }
-
-// // fetch(url)
-// //   .then(response => response.json())
-// //   .then(data => {
-// //     // Access the video IDs and thumbnails
-// //     var obj=new dataOfVideo
-// //     const results = data.items.map(item => {
-// //         obj.videoId=item.id.videoId;
-// //         obj.thumbnail=item.snippet.thumbnails.default.url;
-// //         arr.push(obj)
-// //       return {
-// //         id: item.id.videoId,
-// //         thumbnail: item.snippet.thumbnails.default.url
-// //       };
-// //     });
-// //     console.log(results);
-// //     console.log(arr);
-// //     domFun()
-// //   })
-// //   .catch(error => console.error(error));
-
-// //   /**
-// //    * Sample JavaScript code for youtube.videos.list
-// //    * See instructions for running APIs Explorer code samples locally:
-// //    * https://developers.google.com/explorer-help/code-samples#javascript
-// //    */
-
-//   function authenticate() {
-//     return gapi.auth2.getAuthInstance()
-//         .signIn({scope: "https://www.googleapis.com/auth/youtube.readonly"})
-//         .then(function() { console.log("Sign-in successful"); },
-//               function(err) { console.error("Error signing in", err); });
-//   }
-//   function loadClient() {
-//     gapi.client.setApiKey(apiKey);
-//     return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-//         .then(function() { console.log("GAPI client loaded for API"); },
-//               function(err) { console.error("Error loading GAPI client for API", err); });
-//   }
-//   // Make sure the client is loaded and sign-in is complete before calling this method.
-//   function execute() {
-//     return gapi.client.youtube.videos.list({
-//       "part": [
-//         "snippet,contentDetails,statistics"
-//       ],
-//       "chart": "mostPopular",
-//       "regionCode": "US"
-//     })
-//         .then(function(response) {
-//                 // Handle the results here (response.result has the parsed body).
-//                 console.log("Response", response);
-//               },
-//               function(err) { console.error("Execute error", err); });
-//   }
-//   gapi.load("client:auth2", function() {
-//     gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
-//   });
-
-// }
